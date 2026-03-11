@@ -86,6 +86,12 @@ FROM tank_usage
 GROUP BY distributor_id;
 
 ### Sensitivity Analysis
-SELECT * FROM sensitivity_analysis;
+SELECT 
+    churn,
+    lifetime,
+    ltv_per_tank,
+    ROUND((ltv_per_tank - 167) / 167 * 100, 1) AS ltv_improvement_pct
+FROM sensitivity_analysis
+ORDER BY churn DESC;
 
   
