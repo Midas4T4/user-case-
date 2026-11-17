@@ -52,7 +52,7 @@ LTV per tank = a.revenue x ltv= 167
 - ltv:cac = 1.4x
 - Break even = total cost of acquisition / m.revenue per distributor =10.5 months 
 
- ## QUERIES USED 
+## QUERIES USED 
  -- Checked total gas used per distributor 
  SELECT distributor_id SUM(gas_volume_used) AS total_gas
  FROM tank_usage
@@ -62,8 +62,7 @@ LTV per tank = a.revenue x ltv= 167
  SELECT churn, lifetime, ltv_per_user
  FROM sensitivity_analysis
  ORDER BY churn DESC;
- 
-  ## key Findings
+ ## key Findings
 - Monthly revenue per user comes in slowly at about $1,500 a month, which makes it takes 10.5months to break even. this is not good
 - The recovery of cost of hardware is considered before any revenue is avcounted for
 - The LTV of 8.3 months leaves little room for profits
@@ -81,9 +80,9 @@ A reduction un churn rate to say 8% would significantly increase LTV to about 12
 SELECT * FROM tank_usage;
 
 ### Total Gas Usage by Distributor
-SELECT distributor_id, SUM(gas_volume_used) AS total_gas
+‘’’SELECT distributor_id, SUM(gas_volume_used) AS total_gas
 FROM tank_usage
-GROUP BY distributor_id;
+GROUP BY distributor_id;’’’
 
 ### Sensitivity Analysis
 SELECT 
