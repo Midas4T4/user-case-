@@ -93,4 +93,12 @@ SELECT
 FROM sensitivity_analysis
 ORDER BY churn DESC;
 
-  
+  ### Results: Churn Sensitivity Analysis
+
+| Churn Rate | Lifetime (months) | LTV per Tank | Margin after $90 Hardware | Change vs 12% Baseline |
+|---|---|---|---|---|
+| 15% | 6.67 | $133.33 | $43.33 | -20.0% |
+| 12% (baseline) | 8.33 | $166.67 | $76.67 | 0.0% |
+| 10% | 10.00 | $200.00 | $110.00 | +20.0% |
+| 8% | 12.50 | $250.00 | $160.00 | +50.0% |
+| 5% | 20.00 | $400.00 | $310.00 | +140.0% |
